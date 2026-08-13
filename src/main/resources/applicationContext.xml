@@ -18,9 +18,44 @@
       <property name="name" value="Jasvant"/>
       <property name="gender" value="male"/>
       <property name="address" ref="add1"/> 
+      
+      <property name="list">
+            <list>
+            <value>110</value>
+            <value>111</value>
+            <value>112</value>
+            <value>113</value>
+            <value>114</value>
+            <value>115</value>
+            <value>110</value>
+            <value>111</value>
+            </list>
+     </property>
+     <property name="set">
+              <set>
+              <value>10</value>
+              <value>11</value>
+              <value>12</value>
+              <value>13</value>
+              <value>14</value>
+              <value>10</value>
+              <value>11</value>
+              <value>15</value>
+              </set>
+       </property>
+       <property name="map">
+              <map>
+              <entry key="1" value="ONE"/>
+              <entry key="2" value="TWO"/>
+              <entry key="3" value="THREE"/>
+              <entry key="4" value="FOUR"/>
+              <entry key="2" value="two"/>
+              <entry key="1" value="one"/>
+              </map>
+       </property>
    </bean>
    
-   <bean name="add2" class="seekho.spring.model.Address">
+ <!--  <bean name="add2" class="seekho.spring.model.Address">
      <constructor-arg name="city" value="Bareilly"/>
      <constructor-arg   name="state" value="UP"/>
       </bean>
@@ -32,7 +67,7 @@
    <constructor-arg name="gendar" value="female"/>
    <constructor-arg name="address" ref="add2"/>
    
-   </bean>
+   </bean>-->
    
 
 </beans>
