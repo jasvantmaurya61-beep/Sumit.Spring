@@ -6,18 +6,19 @@
 
     <!-- bean definitions here -->
     
-   <bean name="emp1" class="seekho.spring.model.Employee">
+   <bean name="emp1" class="seekho.spring.model.Employee"
+   scope="prototype">
       <property name="id" value="120"/>
       <property name="name" value="Jasvant"/>
       <property name="gender" value="male"/> 
    </bean>
-   <bean name="emp2" class="seekho.spring.model.Employee">
+  <!-- <bean name="emp2" class="seekho.spring.model.Employee">
    
    <constructor-arg name="id" value="124"/>
    <constructor-arg name="name" value="Rekha"/>
    <constructor-arg name="gendar" value="female"/>
    
-   </bean>
+   </bean>-->
    
 
 </beans>
