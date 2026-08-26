@@ -20,5 +20,15 @@
     <version>7.0.8</version>
     <scope>compile</scope>
 </dependency>
-   </dependencies>
+   <dependency>
+   	<groupId>com.hibernate.learning</groupId>
+   	<artifactId>suneel.hibernate</artifactId>
+   	<version>0.0.1-SNAPSHOT</version>
+   </dependency>
+   <dependency>
+   	<groupId>com.jdbc.learning</groupId>
+   	<artifactId>Jasvant.JDBC</artifactId>
+   	<version>0.0.1-SNAPSHOT</version>
+   </dependency>
+  </dependencies>
   </project>

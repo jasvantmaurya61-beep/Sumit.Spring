@@ -6,23 +6,23 @@
 
     <!-- bean definitions here -->
     
-    
-     <bean name="address1" class="seekho.spring.model.Address" scope="prototype">
+    <!--Abstract bean allow you to define common properties and configuration
+    once and reuse them across multiple bean-->
+    <bean id="p1" abstract="true">
+
+
+          <property name="companyName" value="TCS" />
+          <property name="empId" value="101" />
+
+
+    </bean>
     
      
-     <property name="city" value="budaun"/>
-     <property name="state" value="UP"/>
-      </bean>
-    
-    
- <!--  <bean name="emp1" class="seekho.spring.model.Employee" init-method="xmlInitMethod" destroy-method="xmlDestroyMehod">-->
-    <bean name="emp1" class="seekho.spring.model.Employee" autowire="byType" init-method="xmllnitMethod" destroy-method="xmlDestroyMehod" >
-      <property name="id" value="120"/>
-      <property name="name" value="Jasvant"/>
-     
-      
-   </bean>
-   
+     <bean id="child" class="seekho.spring.model.child" parent="p1">
+       <property name="salary" value="220000"/>
+       <property name="age" value="18"/>
+
+     </bean>
 
 </beans>
 
