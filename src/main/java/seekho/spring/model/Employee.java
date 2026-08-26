@@ -2,6 +2,18 @@ package seekho.spring.model;
 
 public class Employee {
 	
+	
+	public void xmllnitMethod(){
+		System.out.println("Employee XML Init Method Called");
+		
+	}
+
+	public void xmlDestroyMehod(){
+		System.out.println("Employee XML Init Method Called");
+		
+	}
+	
+	
 	private int id;
 	private String name,gender;
 	
