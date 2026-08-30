@@ -1,65 +1,97 @@
 package seekho.spring.model;
 
 
-	abstract public class Employee{
+	public class Employee{
 	
 	
 	
 	
-	private String name;
-	private int age;
+	private int id;
+	private String name , gender;
 	private int salary;
 	
-	 public Employee() {
-		 super();
-		 System.out.println("Employee.Employee()");
-	}
+	public Employee() {
 	
+	super();
 	
-	
-	Address address;
-
-	public abstract Address applyAddress();
-	
-	public Address getAddress() {
-		return address;
 	}
 
+	
 
-	public void setAddress(Address address) {
-		this.address = address;
-		System.out.println("Employee.setAddress()");
+
+	public Employee(int id, String name, String gender, int salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.gender = gender;
+		this.salary = salary;
 	}
 
 
-	
-	
-	
-	public int getAge() {
-		return age;
+
+
+	public int getId() {
+		return id;
 	}
 
-	public void setAge(int age) {
-		this.age = age;
+
+
+
+	public void setId(int id) {
+		this.id = id;
 	}
+
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+
+	public String getGender() {
+		return gender;
+	}
+
+
+
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+
+
 
 	public int getSalary() {
 		return salary;
 	}
 
+
+
+
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
 
-	
+
+
+
 	@Override
 	public String toString() {
-	
-		return "Employee [name=" + name + ", age=" + age + ", salary=" + salary + ", address=" + address + "]";
+		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", salary=" + salary + "]";
 	}
 
-	
-	
+	}
 
-}
+
 

@@ -7,14 +7,22 @@
     <!-- bean definitions here -->
     
     
-     <bean name="address1" class="seekho.spring.model.Address" scope="prototype">
-      <property name="city" value="Hisar" />
-           <property name="state" value="Hariyana" />
-     
-     </bean>
-      <bean id="emp1" class="seekho.spring.model.Employee" autowire="byType">
-        <lookup-method name="applyAddress" bean="address1"/>
-        </bean>
-   
+    
+<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/java11" />
+		<property name="username" value="root" />
+		<property name="password" value="Root@123" />
+	</bean>
+
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="ds"></property>
+	</bean>
+
+	<bean id="edao" class="seekho.spring.repo.EmployeeDao">
+  
+         <constructor-arg ref="jdbcTemplate"></constructor-arg>
+  
+	</bean>
 
 </beans>

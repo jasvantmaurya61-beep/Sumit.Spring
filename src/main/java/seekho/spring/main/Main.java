@@ -1,10 +1,15 @@
 package seekho.spring.main;
 
+
+
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import seekho.spring.model.Address;
+
 import seekho.spring.model.Employee;
+import seekho.spring.repo.EmployeeDao;
 
 public class Main {
 
@@ -12,19 +17,25 @@ public class Main {
 		
 		
 		
-		ApplicationContext factory = new ClassPathXmlApplicationContext("applicationContext.xml");
+		ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		
 		
 		
-		Employee obj = (Employee) factory.getBean("emp1");
+
+		EmployeeDao edao  = ioc.getBean("edao",EmployeeDao.class);
+		System.out.println("Dao" +edao);
 		
-        System.out.println(obj);
+		Employee emp1 = new Employee(6, "Susheel","Male",23000);
 		
-		obj.setAddress(obj.applyAddress());
-		System.out.println(obj);
-		Address a1 = obj.applyAddress();
-		System.out.println(a1);
+//		edao.saveEmployee(emp1);
+//		edao.updateEmployee(emp1);
+//		edao.deleteEmployee(emp1);
+		
+        List<Employee> allEmp = edao.getAllEmployee();
+		
+		System.out.println(allEmp);
+		
 
 	}
 
