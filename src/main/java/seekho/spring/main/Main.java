@@ -26,15 +26,15 @@ public class Main {
 		EmployeeDao edao  = ioc.getBean("edao",EmployeeDao.class);
 		System.out.println("Dao" +edao);
 		
-		Employee emp1 = new Employee(6, "Susheel","Male",23000);
+		Employee emp1 = new Employee(6, "Rekha kumari","female",23000);
 		
 //		edao.saveEmployee(emp1);
 //		edao.updateEmployee(emp1);
-//		edao.deleteEmployee(emp1);
+		edao.deleteEmployee(emp1);
 		
-        List<Employee> allEmp = edao.getAllEmployee();
-		
-		System.out.println(allEmp);
+//        List<Employee> allEmp = edao.getAllEmployee();
+//		
+//		System.out.println(allEmp);
 		
 
 	}
