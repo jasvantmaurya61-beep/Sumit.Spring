@@ -6,6 +6,7 @@
 
     <!-- bean definitions here -->
     
+<<<<<<< Updated upstream
    <bean name="emp1" class="seekho.spring.model.Employee">
       <property name="id" value="120"/>
       <property name="name" value="Jasvant"/>
@@ -18,6 +19,20 @@
    <constructor-arg name="gendar" value="female"/>
    
    </bean>
+=======
+    
+     <bean name="address1" class="seekho.spring.model.Address" scope="prototype">
+      <property name="city" value="Hisar" />
+           <property name="state" value="Hariyana" />
+           </bean>
+           
+         
+      <bean id="emp1" class="seekho.spring.model.Employee" autowire="byType">
+        <lookup-method name="applyAddress" bean="address1"/>
+        </bean>
+        
+      
+>>>>>>> Stashed changes
    
 
 </beans>
