@@ -1,16 +1,26 @@
 package seekho.spring.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Employee {
 	
+	private static final String Iaddress = null;
 	private int id;
 	private String name,gender;
+	@Autowired
+	@Qualifier(value = "add2")
+	private IAddress address;
 	
 	 public Employee() {
 		 super();
+		id=10;
 		 System.out.println("Employee.Employee()");
 	}
 	
-	
+
 	public Employee(int id, String name, String gender) {
 		super();
 		this.id = id;
@@ -18,6 +28,18 @@ public class Employee {
 		this.gender = gender;
 		System.out.println("Employee.Employee(2)");
 	}
+	
+	
+	public IAddress getAddress() {
+		return address;
+	}
+
+	
+	public void setAddress(IAddress address) {
+		this.address = address;
+	}
+
+
 	public int getId() {
 		return id;
 	}
@@ -40,10 +62,16 @@ public class Employee {
 		System.out.println("Employee.getGender()");
 		this.gender = gender;
 	}
+
+
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + "]";
+		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";
 	}
+
+
+	
+	
 	
 	
 	
